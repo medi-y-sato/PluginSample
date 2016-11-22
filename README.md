@@ -1,0 +1,2 @@
+# PluginSample
+ionic2でcordovaプラグインを色々実装してみる
