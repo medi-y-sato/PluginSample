@@ -1,6 +1,9 @@
 # PluginSample
 ionic2でcordovaプラグインを色々実装してみる
 
+`ionic g page xxxx`
+でページ追加してから実装する。
+
 
 ## cordova-plugin-socialsharing
 いわゆる[共有]メニュー
