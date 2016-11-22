@@ -1,6 +1,7 @@
 # PluginSample
 ionic2でcordovaプラグインを色々実装してみる
 
+
 ## cordova-plugin-socialsharing
 いわゆる[共有]メニュー
 https://www.npmjs.com/package/cordova-plugin-socialsharing
