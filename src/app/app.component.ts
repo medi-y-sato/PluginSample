@@ -3,6 +3,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { TopPage } from '../pages/top/top';
+import { SocialsharingPage } from '../pages/socialsharing/socialsharing';
 
 
 @Component({
@@ -21,6 +22,7 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'トップページ', component: TopPage },
+      { title: 'SocialsharingPage', component: SocialsharingPage },
     ];
 
   }
