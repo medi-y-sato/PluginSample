@@ -5,9 +5,6 @@ ionic2でcordovaプラグインを色々実装してみる
 でページ追加してから実装する。
 
 
-## cordova-plugin-socialsharing
-いわゆる[共有]メニュー
-https://www.npmjs.com/package/cordova-plugin-socialsharing
 
 
 ## cordova-plugin-globalization
