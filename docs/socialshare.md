@@ -30,7 +30,10 @@ SocialSharing.shareWithOptions(
 ```
 
 ## 動作イメージ
-![SocialSharing iOS](./socialshare_ios.png "iOSイメージ")
+![SocialSharing iOS](./sosialshare_ios.png "iOSイメージ")
+![SocialSharing Android](./socialshare_android.jpg "Androidイメージ")
+
+
 
 
 ## 解説
