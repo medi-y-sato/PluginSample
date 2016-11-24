@@ -1,8 +1,6 @@
 
 # toc
 
-[Qiita](http://qiita.com "Qiita")
-
 ## [cordova-plugin-socialsharing](socialshare.md)
 いわゆる[共有]メニュー
 https://www.npmjs.com/package/cordova-plugin-socialsharing
