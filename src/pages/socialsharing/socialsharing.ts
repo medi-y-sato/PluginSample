@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { SocialSharing } from 'ionic-native'
 /*
   Generated class for the Socialsharing page.
@@ -26,33 +27,64 @@ import { SocialSharing } from 'ionic-native'
 <a href="https://www.npmjs.com/package/cordova-plugin-socialsharing">cordova-plugin-x-socialsharing</a>
 </div>
 
+<ion-list inset>
+  <form [formGroup]="form">
+    <ion-item>
+      <ion-label>message</ion-label>
+      <ion-input formControlName="message" placeholder="message"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>subject</ion-label>
+      <ion-input formControlName="subject" placeholder="subject"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>url</ion-label>
+      <ion-input formControlName="url" placeholder="url"></ion-input>
+    </ion-item>
+    <ion-item>
+      <button ion-button block (click)="share()">Submit</button>
+    </ion-item>
+  </form>
+</ion-list>
+
 </ion-content>
 `
 })
 
 export class SocialsharingPage {
 
-  constructor(public navCtrl: NavController) {
+  form: FormGroup;
+
+  constructor(public navCtrl: NavController, @Inject(FormBuilder) formbuilder: FormBuilder) {
+    this.form = formbuilder.group({
+      message:'',
+      subject:'',
+      title:'',
+      url:'https://example.com',
+    });
   }
 
   ionViewDidLoad() {
     console.log('Hello SocialsharingPage Page');
-    this.share()
+
   }
 
   share(){
+    console.dir(this.form)
+
     SocialSharing.shareWithOptions(
       {
-        message: 'share this', // not supported on some apps (Facebook, Instagram)
-        subject: 'the subject', // fi. for email
-        files: ['', ''], // an array of filenames either locally or remotely
-        url: 'https://www.website.com/foo/#bar?a=b',
-        chooserTitle: 'Pick an app' // Android only, you can override the default share sheet title
+        message: this.form.value.message,
+        subject: this.form.value.subject,
+//        files: ['', ''],
+        url: this.form.value.url,
+        chooserTitle: '共有する:'
       },
     ).then(
       result => console.log(result.completed + "/" + result.app),
       msg => console.log("Sharing failed with message: " + msg)
     )
+
   }
 
 }
