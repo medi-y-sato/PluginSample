@@ -4,6 +4,7 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { TopPage } from '../pages/top/top';
 import { SocialsharingPage } from '../pages/socialsharing/socialsharing';
+import { MediaCapturePage } from '../pages/media-capture/media-capture';
 
 
 @Component({
@@ -23,6 +24,7 @@ export class MyApp {
     this.pages = [
       { title: 'トップページ', component: TopPage },
       { title: 'SocialsharingPage', component: SocialsharingPage },
+      { title: 'MediaCapturePage', component: MediaCapturePage },
     ];
 
   }
