@@ -4,6 +4,7 @@ import { MyApp } from './app.component';
 import { TopPage } from '../pages/top/top';
 import { SocialsharingPage } from '../pages/socialsharing/socialsharing';
 import { MediaCapturePage } from '../pages/media-capture/media-capture';
+import { CameraPreviewPage } from '../pages/camera-preview/camera-preview'
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { MediaCapturePage } from '../pages/media-capture/media-capture';
     TopPage,
     SocialsharingPage,
     MediaCapturePage,
+    CameraPreviewPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -21,6 +23,7 @@ import { MediaCapturePage } from '../pages/media-capture/media-capture';
     TopPage,
     SocialsharingPage,
     MediaCapturePage,
+    CameraPreviewPage,
   ],
   providers: []
 })
