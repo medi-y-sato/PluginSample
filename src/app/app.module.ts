@@ -3,12 +3,14 @@ import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { TopPage } from '../pages/top/top';
 import { SocialsharingPage } from '../pages/socialsharing/socialsharing';
+import { GlobalizationPage } from '../pages/globalization/globalization'
 
 @NgModule({
   declarations: [
     MyApp,
     TopPage,
     SocialsharingPage,
+    GlobalizationPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -18,6 +20,7 @@ import { SocialsharingPage } from '../pages/socialsharing/socialsharing';
     MyApp,
     TopPage,
     SocialsharingPage,
+    GlobalizationPage,
   ],
   providers: []
 })

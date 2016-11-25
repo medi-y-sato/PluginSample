@@ -4,7 +4,7 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { TopPage } from '../pages/top/top';
 import { SocialsharingPage } from '../pages/socialsharing/socialsharing';
-
+import { GlobalizationPage } from '../pages/globalization/globalization'
 
 @Component({
   templateUrl: 'app.html'
@@ -23,6 +23,7 @@ export class MyApp {
     this.pages = [
       { title: 'トップページ', component: TopPage },
       { title: 'SocialsharingPage', component: SocialsharingPage },
+      { title: 'GlobalizationPage', component: GlobalizationPage },
     ];
 
   }

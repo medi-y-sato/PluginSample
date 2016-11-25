@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "0.0.45",
+    "@types/cordova-plugin-globalization": "0.0.3",
     "@types/cordova-plugin-x-socialsharing": "^5.0.22",
     "typescript": "2.0.6"
   },
