@@ -105,7 +105,7 @@ export class GlobalizationPage {
     )
 
     Globalization.stringToNumber("1234567890",{type:'decimal'}).then(
-      res=>{ this.state.push({name:'stringToNumber', value: res}) },
+      res=>{ this.state.push({name:'stringToNumber', value: res.value}) },
       err=>{ this.state.push({name:'stringToNumber:error', value: err})}
     )
 
