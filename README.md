@@ -27,10 +27,6 @@ https://www.npmjs.com/package/cordova-plugin-spinner
 https://www.npmjs.com/package/cordova-plugin-media-capture
 
 
-## cordova-fabric-plugin
-fabric.io の Crashlytics と Answers
-https://www.npmjs.com/package/cordova-fabric-plugin
-
 
 ## phonegap-plugin-contentsync
 外部データを取得/同期/キャッシュする
