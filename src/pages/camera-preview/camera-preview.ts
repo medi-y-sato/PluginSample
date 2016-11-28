@@ -28,8 +28,8 @@ import { CameraPreview, CameraPreviewRect } from 'ionic-native'
 
 {{cameraObservable | json | async}}<br />
 
-<img #originalPicture width="48" height="64"><br />
-<img #previewPicture width="20" height="32">
+<img src="{{originalPicture}}" width="48" height="64"><br />
+<img src="{{previewPicture}}" width="20" height="32">
 
 <hr />
 
@@ -44,8 +44,11 @@ import { CameraPreview, CameraPreviewRect } from 'ionic-native'
 `,
   styles: [`
     html, body, ion-content, ion-page, .nav-decor{
-        background-color: transparent !important;
+      background-color: transparent !important;
+      background-image: url('assets/background.png');
+      background-size: cover;
     }
+
     `]
 })
 export class CameraPreviewPage {
@@ -74,8 +77,8 @@ export class CameraPreviewPage {
       .5 // alpha
     )
     CameraPreview.setOnPictureTakenHandler().subscribe( result => {
-      this.originalPicture = result[0]
-      this.previewPicture = result[1]
+      this.originalPicture = result[0]  // アプリローカルフォルダに保存された
+      this.previewPicture = result[1] // ファイル名が帰ってくる
 
     })
   }
