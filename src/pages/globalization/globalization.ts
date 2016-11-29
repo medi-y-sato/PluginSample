@@ -66,7 +66,7 @@ export class GlobalizationPage {
       err=>{ this.state.push({name:'getDatePattern:error', value: err})}
     )
 
-    Globalization.getCurrencyPattern('jpy').then(
+    Globalization.getCurrencyPattern('JPY').then(
       res=>{ this.state.push({name: 'getCurrencyPattern', value: res}) },
       err=>{ this.state.push({name:'getCurrencyPattern:error', value: err})}
     )
