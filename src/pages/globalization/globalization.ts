@@ -91,13 +91,10 @@ export class GlobalizationPage {
       err=>{ this.state.push({name:'isDayLightSavingsTime:error', value: err})}
     )
 
-/*
-    let numberValue: number = 0.15
-    Globalization.numberToString(numberValue, {type:'percent'}).then(
-      res=>{ this.state.push({name:'numberToString', value: res}) },
+    Globalization.numberToString(3.141592,{type:'decimal'}).then(
+      res=>{ this.state.push({name:'numberToString', value: res.value}) },
       err=>{ this.state.push({name:'numberToString:error', value: err})}
     )
-*/
 
     Globalization.stringToDate(nowDate.toString(),{formatLength:null, selector:null}).then(
       res=>{ this.state.push({name:'stringToDate', value: res}) },
