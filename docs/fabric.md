@@ -4,7 +4,9 @@
 fabric.io の Crashlytics と Answers
 https://www.npmjs.com/package/cordova-fabric-plugin
 
-## 使いかた
+ionic-native対応ではなかったので見送り。
+
+## 導入
 
 ベース機能はプラグイン導入するだけ。
 導入方法がちょっと特殊で、 'plugin add' する時にAPI Key/Secretを指定する。
