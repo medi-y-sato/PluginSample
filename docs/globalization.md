@@ -5,7 +5,7 @@ https://www.npmjs.com/package/cordova-plugin-globalization
 
 ## 使いかた
 
-`Globalization.xxxx()` のメソッドから then で結果を受け取る。
+`Globalization.xxxx()` のメソッドから then で結果を受け取るだけ。
 
 ```javascript
 Globalization.getPreferredLanguage().then(
@@ -15,6 +15,10 @@ Globalization.getPreferredLanguage().then(
   err=>{ this.state.push({name:'getPreferredLanguage:error', value: err})}
 )
 ```
+
+![Globalization result iOS](./globalization_ios.png "iOSイメージ")
+![Globalization result Android](./globalization_android.png "Androidイメージ")
+
 
 
 ## 注意点
