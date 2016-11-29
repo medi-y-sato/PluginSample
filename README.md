@@ -12,11 +12,6 @@ https://github.com/wymsee/cordova-imageResizer
 https://github.com/AlexDisler/cordova-plugin-inapppurchase
 
 
-## cordova-plugin-spinner-dialog
-スピナー表示
-https://github.com/Paldom/SpinnerDialog
-
-
 ## cordova-plugin-vibration
 バイブレーション
 https://github.com/apache/cordova-plugin-vibration
