@@ -5,6 +5,7 @@ import { TopPage } from '../pages/top/top';
 import { SocialsharingPage } from '../pages/socialsharing/socialsharing';
 import { MediaCapturePage } from '../pages/media-capture/media-capture';
 import { SaveImageGalleryPage } from '../pages/save-image-gallery/save-image-gallery'
+import { CameraPreviewPage } from '../pages/camera-preview/camera-preview'
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { SaveImageGalleryPage } from '../pages/save-image-gallery/save-image-gal
     SocialsharingPage,
     MediaCapturePage,
     SaveImageGalleryPage,
+    CameraPreviewPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -24,6 +26,7 @@ import { SaveImageGalleryPage } from '../pages/save-image-gallery/save-image-gal
     SocialsharingPage,
     MediaCapturePage,
     SaveImageGalleryPage,
+    CameraPreviewPage,
   ],
   providers: []
 })

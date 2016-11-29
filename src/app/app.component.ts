@@ -6,6 +6,7 @@ import { TopPage } from '../pages/top/top';
 import { SocialsharingPage } from '../pages/socialsharing/socialsharing';
 import { MediaCapturePage } from '../pages/media-capture/media-capture';
 import { SaveImageGalleryPage } from '../pages/save-image-gallery/save-image-gallery'
+import { CameraPreviewPage } from '../pages/camera-preview/camera-preview'
 
 
 @Component({
@@ -27,6 +28,7 @@ export class MyApp {
       { title: 'SocialsharingPage', component: SocialsharingPage },
       { title: 'MediaCapturePage', component: MediaCapturePage },
       { title: 'SaveImageGalleryPage', component: SaveImageGalleryPage },
+      { title: 'CameraPreviewPage', component: CameraPreviewPage },
     ];
 
   }

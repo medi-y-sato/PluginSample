@@ -45,6 +45,18 @@ https://www.npmjs.com/package/cordova-plugin-globalization
 
 
 
-## cordova-fabric-plugin
-fabric.io の Crashlytics と Answers
-https://www.npmjs.com/package/cordova-fabric-plugin
+<<<<<<< HEAD
+## cordova-plugin-spinner
+処理待ちとかで表示するスピナー
+https://www.npmjs.com/package/cordova-plugin-spinner
+
+
+## cordova-plugin-media-capture
+動画や画面のキャプチャを取る
+https://www.npmjs.com/package/cordova-plugin-media-capture
+
+
+
+## phonegap-plugin-contentsync
+外部データを取得/同期/キャッシュする
+https://www.npmjs.com/package/phonegap-plugin-contentsync
