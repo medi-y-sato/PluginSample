@@ -3,6 +3,7 @@ import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { TopPage } from '../pages/top/top';
 import { SocialsharingPage } from '../pages/socialsharing/socialsharing';
+import { GlobalizationPage } from '../pages/globalization/globalization'
 import { MediaCapturePage } from '../pages/media-capture/media-capture';
 import { CameraPreviewPage } from '../pages/camera-preview/camera-preview'
 
@@ -11,6 +12,7 @@ import { CameraPreviewPage } from '../pages/camera-preview/camera-preview'
     MyApp,
     TopPage,
     SocialsharingPage,
+    GlobalizationPage,
     MediaCapturePage,
     CameraPreviewPage,
   ],
@@ -22,6 +24,7 @@ import { CameraPreviewPage } from '../pages/camera-preview/camera-preview'
     MyApp,
     TopPage,
     SocialsharingPage,
+    GlobalizationPage,
     MediaCapturePage,
     CameraPreviewPage,
   ],
