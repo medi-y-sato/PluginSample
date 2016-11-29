@@ -43,7 +43,8 @@
     "cordova-plugin-file",
     "cordova-plugin-compat",
     "com.mbppower.camerapreview",
-    "cordova-plugin-crosswalk-webview"
+    "cordova-base64-to-gallery",
+    "cordova-plugin-spinner-dialog"
   ],
   "cordovaPlatforms": [
     "ios",
