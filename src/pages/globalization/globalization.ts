@@ -87,7 +87,7 @@ export class GlobalizationPage {
     )
 
     Globalization.isDayLightSavingsTime(new Date()).then(
-      res=>{ this.state.push({name:'isDayLightSavingsTime', value: res}) },
+      res=>{ this.state.push({name:'isDayLightSavingsTime', value: res.dst}) },
       err=>{ this.state.push({name:'isDayLightSavingsTime:error', value: err})}
     )
 
