@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { Globalization } from 'ionic-native'
+
 /*
   Generated class for the Globalization page.
 
@@ -39,8 +40,6 @@ export class GlobalizationPage {
   state: any[]
 
   constructor(public navCtrl: NavController) {
-    console.dir(Globalization)
-
     this.state = []
     let nowDate: Date = new Date()
     let nowDateString = '1976/03/30 12:34:56'
