@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { SpinnerDialog } from 'ionic-native'
 /*
   Generated class for the SpinnerDialog page.
 
@@ -21,15 +22,29 @@ import { NavController } from 'ionic-angular';
 
 <ion-content padding>
 
+<button (click)="toggleSpinner()">spinner</button>
+
 </ion-content>
 `
 })
 export class SpinnerDialogPage {
 
+  spinnerActive: boolean
+
   constructor(public navCtrl: NavController) {}
 
   ionViewDidLoad() {
     console.log('Hello SpinnerDialogPage Page');
+  }
+
+  toggleSpinner(){
+    if ( ! this.spinnerActive ){
+      SpinnerDialog.show('たいとる', ' めっせーじ')
+      this.spinnerActive = true
+    }else{
+      SpinnerDialog.hide()
+      this.spinnerActive = false
+    }
   }
 
 }
