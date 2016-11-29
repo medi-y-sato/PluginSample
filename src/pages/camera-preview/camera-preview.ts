@@ -23,13 +23,7 @@ import { CameraPreview, CameraPreviewRect } from 'ionic-native'
 
 
 <ion-content padding>
-
-{{message}}<br />
-
-{{cameraObservable | json | async}}<br />
-
-<img src="{{originalPicture}}" width="48" height="64"><br />
-<img src="{{previewPicture}}" width="20" height="32">
+<img src="{{originalPicture}}" width="{{pictureWidth}}" height="{{pictureHeight}}"><br />
 
 <hr />
 
@@ -40,16 +34,11 @@ import { CameraPreview, CameraPreviewRect } from 'ionic-native'
 <button ion-button block (click)="button_show()">show</button><br />
 <button ion-button block (click)="button_hide()">hide</button><br />
 
-</ion-content>
-`,
-  styles: [`
-    html, body, ion-content, ion-page, .nav-decor{
-      background-color: transparent !important;
-      background-image: url('assets/background.png');
-      background-size: cover;
-    }
+{{message}}<br />
+{{originalPicture}}<br />
 
-    `]
+</ion-content>
+`
 })
 export class CameraPreviewPage {
 
@@ -57,51 +46,61 @@ export class CameraPreviewPage {
   originalPicture: any
   previewPicture: any
   cameraObservable: any
+  pictureWidth: number = 240
+  pictureHeight: number = 320
 
   constructor(public navCtrl: NavController) {
   }
 
   ionViewDidLoad() {
     console.log('Hello CameraPreviewPage Page');
+
+    CameraPreview.setOnPictureTakenHandler().subscribe(
+      result => {
+        this.message = "setOnPictureTakenHandler : " + result[0]
+        this.originalPicture = result[0]  // アプリローカルフォルダに保存されたファイル名が帰ってくる
+        CameraPreview.stopCamera()
+      }
+    )
   }
+
 
   button_startCamera(){
     this.message = "button_startCamera"
 
     CameraPreview.startCamera(
-      { x: 0, y: 0, width: 480, height: 640 }, // rect
+      { x: 0, y: 0, width: this.pictureWidth, height: this.pictureHeight }, // rect
       'back',  //defaultCamera
       true, // tapEnabled
       false,  // dragEnabled
       true, // toBack
-      .5 // alpha
+      1 // alpha
     )
-    CameraPreview.setOnPictureTakenHandler().subscribe( result => {
-      this.originalPicture = result[0]  // アプリローカルフォルダに保存された
-      this.previewPicture = result[1] // ファイル名が帰ってくる
-
-    })
   }
+
   button_stopCamera(){
     this.message = "button_stopCamera"
     CameraPreview.stopCamera()
   }
+
   button_takePicture(){
     this.message = "button_takePicture"
-    CameraPreview.takePicture({ maxWidth: 48, maxHeight: 64 })
+    CameraPreview.takePicture({ maxWidth: this.pictureWidth, maxHeight: this.pictureHeight })
   }
+
   button_switchCamera(){
     this.message = "button_switchCamera"
     CameraPreview.switchCamera()
   }
+
   button_show(){
     this.message = "button_show"
     CameraPreview.show()
   }
+
   button_hide(){
     this.message = "button_hide"
     CameraPreview.hide()
   }
-
 
 }
