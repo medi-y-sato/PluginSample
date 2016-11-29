@@ -43,6 +43,7 @@ export class GlobalizationPage {
 
     this.state = []
     let nowDate: Date = new Date()
+    let nowDateString = '1976/03/30 12:34:56'
 
     Globalization.getPreferredLanguage().then(
       res=>{
@@ -96,9 +97,9 @@ export class GlobalizationPage {
       err=>{ this.state.push({name:'numberToString:error', value: err})}
     )
 
-    Globalization.stringToDate(nowDate.toString(),{formatLength:null, selector:null}).then(
+    Globalization.stringToDate(nowDateString,{formatLength:null, selector:null}).then(
       res=>{ this.state.push({name:'stringToDate', value: res}) },
-      err=>{ this.state.push({name:'stringToDate:error', value: err})}
+      err=>{ this.state.push({name:'stringToDate:error', value: err })}
     )
 
     Globalization.stringToNumber("1234567890",{type:'decimal'}).then(
