@@ -5,6 +5,8 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 import { TopPage } from '../pages/top/top';
 import { SocialsharingPage } from '../pages/socialsharing/socialsharing';
 import { GlobalizationPage } from '../pages/globalization/globalization'
+import { MediaCapturePage } from '../pages/media-capture/media-capture';
+import { CameraPreviewPage } from '../pages/camera-preview/camera-preview'
 
 @Component({
   templateUrl: 'app.html'
@@ -24,6 +26,8 @@ export class MyApp {
       { title: 'トップページ', component: TopPage },
       { title: 'SocialsharingPage', component: SocialsharingPage },
       { title: 'GlobalizationPage', component: GlobalizationPage },
+      { title: 'MediaCapturePage', component: MediaCapturePage },
+      { title: 'CameraPreviewPage', component: CameraPreviewPage },
     ];
 
   }
