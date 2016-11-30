@@ -6,7 +6,6 @@ import { TopPage } from '../pages/top/top';
 import { SocialsharingPage } from '../pages/socialsharing/socialsharing';
 import { GlobalizationPage } from '../pages/globalization/globalization'
 import { MediaCapturePage } from '../pages/media-capture/media-capture';
-import { SaveImageGalleryPage } from '../pages/save-image-gallery/save-image-gallery'
 import { CameraPreviewPage } from '../pages/camera-preview/camera-preview'
 import { SpinnerDialogPage } from '../pages/spinner-dialog/spinner-dialog'
 import { ImageResizerPage } from '../pages/image-resizer/image-resizer'
@@ -30,7 +29,6 @@ export class MyApp {
       { title: 'SocialsharingPage', component: SocialsharingPage },
       { title: 'GlobalizationPage', component: GlobalizationPage },
       { title: 'MediaCapturePage', component: MediaCapturePage },
-      { title: 'SaveImageGalleryPage', component: SaveImageGalleryPage },
       { title: 'CameraPreviewPage', component: CameraPreviewPage },
       { title: 'SpinnerDialogPage', component: SpinnerDialogPage },
       { title: 'ImageResizerPage', component: ImageResizerPage },

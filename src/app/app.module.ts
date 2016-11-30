@@ -5,7 +5,6 @@ import { TopPage } from '../pages/top/top';
 import { SocialsharingPage } from '../pages/socialsharing/socialsharing';
 import { GlobalizationPage } from '../pages/globalization/globalization'
 import { MediaCapturePage } from '../pages/media-capture/media-capture';
-import { SaveImageGalleryPage } from '../pages/save-image-gallery/save-image-gallery'
 import { CameraPreviewPage } from '../pages/camera-preview/camera-preview'
 import { SpinnerDialogPage } from '../pages/spinner-dialog/spinner-dialog'
 import { ImageResizerPage } from '../pages/image-resizer/image-resizer'
@@ -17,7 +16,6 @@ import { ImageResizerPage } from '../pages/image-resizer/image-resizer'
     SocialsharingPage,
     GlobalizationPage,
     MediaCapturePage,
-    SaveImageGalleryPage,
     CameraPreviewPage,
     SpinnerDialogPage,
     ImageResizerPage,
@@ -32,7 +30,6 @@ import { ImageResizerPage } from '../pages/image-resizer/image-resizer'
     SocialsharingPage,
     GlobalizationPage,
     MediaCapturePage,
-    SaveImageGalleryPage,
     CameraPreviewPage,
     SpinnerDialogPage,
     ImageResizerPage,
