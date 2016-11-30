@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { TopPage } from '../pages/top/top';
+import { TopPage } from '../pages/top';
 import { SocialsharingPage } from '../pages/socialsharing';
 import { GlobalizationPage } from '../pages/globalization'
 import { MediaCapturePage } from '../pages/media-capture';
