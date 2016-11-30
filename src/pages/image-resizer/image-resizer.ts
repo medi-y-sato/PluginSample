@@ -50,7 +50,6 @@ export class ImageResizerPage {
   loadImage(){
     console.log('loadImage()')
     let sourceImage = new Image
-    let destinationImage = new Image
 
     sourceImage.onload = ( res ) => {
       console.log('sourceImage.onload fired')

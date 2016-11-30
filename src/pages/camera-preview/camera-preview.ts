@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { CameraPreview, CameraPreviewRect } from 'ionic-native'
+import { CameraPreview } from 'ionic-native'
 
 /*
   Generated class for the CameraPreview page.

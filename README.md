@@ -17,10 +17,6 @@ https://github.com/apache/cordova-plugin-vibration
 https://www.npmjs.com/package/cordova-plugin-globalization
 
 
-## cordova-save-image-gallery
-base64データをギャラリーとかに直接保存
-https://www.npmjs.com/package/cordova-save-image-gallery
-
 
 ## cordova-plugin-spinner
 処理待ちとかで表示するスピナー
