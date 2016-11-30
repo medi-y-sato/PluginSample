@@ -8,6 +8,7 @@ import { GlobalizationPage } from '../pages/globalization/globalization'
 import { MediaCapturePage } from '../pages/media-capture/media-capture';
 import { CameraPreviewPage } from '../pages/camera-preview/camera-preview'
 import { SpinnerDialogPage } from '../pages/spinner-dialog/spinner-dialog'
+import { ImageResizerPage } from '../pages/image-resizer/image-resizer'
 
 @Component({
   templateUrl: 'app.html'
@@ -30,6 +31,7 @@ export class MyApp {
       { title: 'MediaCapturePage', component: MediaCapturePage },
       { title: 'CameraPreviewPage', component: CameraPreviewPage },
       { title: 'SpinnerDialogPage', component: SpinnerDialogPage },
+      { title: 'ImageResizerPage', component: ImageResizerPage },
     ];
 
   }

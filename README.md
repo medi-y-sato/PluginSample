@@ -2,11 +2,6 @@
 ionic2でcordovaプラグインを色々実装してみる
 
 
-## cordova-imageResizer
-画像の情報取得、リサイズ、保存
-https://github.com/wymsee/cordova-imageResizer
-
-
 ## cordova-plugin-inapppurchase
 アプリ内購入
 https://github.com/AlexDisler/cordova-plugin-inapppurchase

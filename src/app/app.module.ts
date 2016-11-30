@@ -7,6 +7,7 @@ import { GlobalizationPage } from '../pages/globalization/globalization'
 import { MediaCapturePage } from '../pages/media-capture/media-capture';
 import { CameraPreviewPage } from '../pages/camera-preview/camera-preview'
 import { SpinnerDialogPage } from '../pages/spinner-dialog/spinner-dialog'
+import { ImageResizerPage } from '../pages/image-resizer/image-resizer'
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { SpinnerDialogPage } from '../pages/spinner-dialog/spinner-dialog'
     MediaCapturePage,
     CameraPreviewPage,
     SpinnerDialogPage,
+    ImageResizerPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -30,6 +32,7 @@ import { SpinnerDialogPage } from '../pages/spinner-dialog/spinner-dialog'
     MediaCapturePage,
     CameraPreviewPage,
     SpinnerDialogPage,
+    ImageResizerPage,
   ],
   providers: []
 })
