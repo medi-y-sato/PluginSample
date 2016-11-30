@@ -2,12 +2,8 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { SpinnerDialog } from 'ionic-native'
-/*
-  Generated class for the SpinnerDialog page.
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
+
 @Component({
   selector: 'page-spinner-dialog',
   template: `
@@ -22,7 +18,8 @@ import { SpinnerDialog } from 'ionic-native'
 
 <ion-content padding>
 
-<button (click)="toggleSpinner()">spinner</button>
+<button ion-button (click)="toggleSpinner()">spinner</button><br />
+スピナー出てからもう一回タップするとスピナー終わります
 
 </ion-content>
 `
