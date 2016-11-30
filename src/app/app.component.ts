@@ -3,12 +3,12 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { TopPage } from '../pages/top/top';
-import { SocialsharingPage } from '../pages/socialsharing/socialsharing';
-import { GlobalizationPage } from '../pages/globalization/globalization'
-import { MediaCapturePage } from '../pages/media-capture/media-capture';
-import { CameraPreviewPage } from '../pages/camera-preview/camera-preview'
-import { SpinnerDialogPage } from '../pages/spinner-dialog/spinner-dialog'
-import { ImageResizerPage } from '../pages/image-resizer/image-resizer'
+import { SocialsharingPage } from '../pages/socialsharing';
+import { GlobalizationPage } from '../pages/globalization'
+import { MediaCapturePage } from '../pages/media-capture';
+import { CameraPreviewPage } from '../pages/camera-preview'
+import { SpinnerDialogPage } from '../pages/spinner-dialog'
+import { ImageResizerPage } from '../pages/image-resizer'
 
 @Component({
   templateUrl: 'app.html'
