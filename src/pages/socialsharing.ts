@@ -3,12 +3,8 @@ import { NavController } from 'ionic-angular';
 
 import {FormBuilder, FormGroup } from '@angular/forms';
 import { SocialSharing } from 'ionic-native'
-/*
-  Generated class for the Socialsharing page.
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
+
 @Component({
   selector: 'page-socialsharing',
   providers: [  ],
@@ -20,12 +16,6 @@ import { SocialSharing } from 'ionic-native'
 </ion-header>
 
 <ion-content padding>
-
-<h1>cordova-plugin-socialsharing</h1>
-<div>
-いわゆる[共有]メニュー
-<a href="https://www.npmjs.com/package/cordova-plugin-socialsharing">cordova-plugin-x-socialsharing</a>
-</div>
 
 <ion-list inset>
   <form [formGroup]="form">

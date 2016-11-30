@@ -4,8 +4,8 @@
 https://github.com/protonet/cordova-plugin-image-resizer
 
 
-![ImageResizer result Android](./imageresizer_android.png "Androidイメージ")
-![ImageResizer result iOS](./imageresizer_ios.png "iOSイメージ")
+![ImageResizer result Android](./img/imageresizer_android.png "Androidイメージ")
+![ImageResizer result iOS](./img/imageresizer_ios.png "iOSイメージ")
 
 ## 使いかた
 
@@ -34,5 +34,5 @@ ImageResizer
 
 結果:
 * ちっちゃいの
-![small](./imageresizer_small.jpg "small")
-* おっきいの  ![large](./imageresizer_large.jpg "large")
+![small](./img/imageresizer_small.jpg "small")
+* おっきいの  ![large](./img/imageresizer_large.jpg "large")

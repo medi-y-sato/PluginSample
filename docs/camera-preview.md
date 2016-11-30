@@ -1,6 +1,6 @@
 
 # cordova-plugin-camera-preview
-カメラのプレビューに任意のBase64画像重ねられるかも！
+カメラのUIを自分で作れる
 https://github.com/westonganger/cordova-plugin-camera-preview
 
 https://ionicframework.com/docs/v2/native/camerapreview/

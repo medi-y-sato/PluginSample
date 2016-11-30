@@ -3,12 +3,6 @@ import { NavController } from 'ionic-angular';
 
 import { ImageResizer, ImageResizerOptions } from 'ionic-native'
 
-/*
-  Generated class for the ImageResizer page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-image-resizer',
   template: `
@@ -24,7 +18,7 @@ import { ImageResizer, ImageResizerOptions } from 'ionic-native'
 <ion-content padding>
 
 <input type="range" #size min="64" max="256" value="128"  (input)="resizeImage(this.sourceImageSrc,size.value)" />
-
+{{size.value}} (64〜256)
 <hr />
 
 <img src="{{destinationImageSrc}}" width="{{destinationImageWidth}}" height="{{destinationImageHeight}}"><br />

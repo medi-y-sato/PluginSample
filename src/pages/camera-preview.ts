@@ -3,12 +3,6 @@ import { NavController } from 'ionic-angular';
 
 import { CameraPreview } from 'ionic-native'
 
-/*
-  Generated class for the CameraPreview page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-camera-preview',
   providers: [ CameraPreview ],
@@ -24,6 +18,8 @@ import { CameraPreview } from 'ionic-native'
 
 <ion-content padding>
 <img src="{{originalPicture}}" width="{{pictureWidth}}" height="{{pictureHeight}}"><br />
+
+<p>startCamera()しないと画像パスが渡されないようなので、画像が出てこない場合はstartCameraボタンを押してみて下さい</p>
 
 <hr />
 
@@ -46,8 +42,8 @@ export class CameraPreviewPage {
   originalPicture: any
   previewPicture: any
   cameraObservable: any
-  pictureWidth: number = 240
-  pictureHeight: number = 320
+  pictureWidth: number = 320
+  pictureHeight: number = 240
 
   constructor(public navCtrl: NavController) {
   }

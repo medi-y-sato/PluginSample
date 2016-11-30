@@ -21,7 +21,8 @@ captureImage()にoptionを渡せるが、一回のオペレーションで撮れ
 
 ## 動作イメージ
 
-![MediaCapture result Android](./mediacapture.jpg "Androidイメージ")
+![MediaCapture result Android](./img/mediacapture_android.png "Androidイメージ")
+![MediaCapture result iOS](./img/mediacapture_ios.png "iOSイメージ")
 
 
 ## 解説

@@ -3,12 +3,6 @@ import { NavController } from 'ionic-angular';
 
 import { Globalization } from 'ionic-native'
 
-/*
-  Generated class for the Globalization page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-globalization',
   template: `
@@ -27,9 +21,6 @@ import { Globalization } from 'ionic-native'
     <ion-card-header>{{list.name}}</ion-card-header>
     <ion-card-content>{{list.value | json}}</ion-card-content>
   </ion-card>
-
-{{state | json}}
-
 
 </ion-content>
 
@@ -57,7 +48,7 @@ export class GlobalizationPage {
     )
 
     Globalization.dateToString(nowDate,{formatLength:'full', selector:'date and time'}).then(
-      res=>{ this.state.push({name:'dateToString', value: res.value}) },
+      res=>{ this.state.push({name:'dateToString', value: nowDate + ' -> ' + res.value}) },
       err=>{ this.state.push({name:'dateToString:error', value: err})}
     )
 
@@ -92,17 +83,17 @@ export class GlobalizationPage {
     )
 
     Globalization.numberToString(3.141592,{type:'decimal'}).then(
-      res=>{ this.state.push({name:'numberToString', value: res.value}) },
+      res=>{ this.state.push({name:'numberToString', value: 3.141592 + ' -> ' + res.value}) },
       err=>{ this.state.push({name:'numberToString:error', value: err})}
     )
 
     Globalization.stringToDate(nowDateString,{formatLength:null, selector:null}).then(
-      res=>{ this.state.push({name:'stringToDate', value: res}) },
+      res=>{ this.state.push({name:'stringToDate', value: nowDateString + ' -> ' + res}) },
       err=>{ this.state.push({name:'stringToDate:error', value: err })}
     )
 
     Globalization.stringToNumber("1234567890",{type:'decimal'}).then(
-      res=>{ this.state.push({name:'stringToNumber', value: res.value}) },
+      res=>{ this.state.push({name:'stringToNumber', value: "1234567890" + ' -> ' + res.value}) },
       err=>{ this.state.push({name:'stringToNumber:error', value: err})}
     )
 

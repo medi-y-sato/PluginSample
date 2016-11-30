@@ -16,8 +16,8 @@ Globalization.getPreferredLanguage().then(
 )
 ```
 
-![Globalization result iOS](./globalization_ios.png "iOSイメージ")
-![Globalization result Android](./globalization_android.png "Androidイメージ")
+![Globalization result iOS](./img/globalization_ios.png "iOSイメージ")
+![Globalization result Android](./img/globalization_android.png "Androidイメージ")
 
 
 
