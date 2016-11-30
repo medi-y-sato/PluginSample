@@ -30,8 +30,8 @@ SocialSharing.shareWithOptions(
 ```
 
 ## 動作イメージ
-![SocialSharing iOS](./sosialshare_ios.png "iOSイメージ")
-![SocialSharing Android](./socialshare_android.jpg "Androidイメージ")
+![SocialSharing iOS](./img/sosialshare_ios.png "iOSイメージ")
+![SocialSharing Android](./img/socialshare_android.jpg "Androidイメージ")
 
 
 

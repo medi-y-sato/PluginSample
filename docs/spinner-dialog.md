@@ -16,8 +16,8 @@ if ( ! this.spinnerActive ){
 }
 ```
 
-![Spinner iOS](./spinner_ios.png "iOSイメージ")
-![Spinner Android](./spinner_android.png "iOSイメージ")
+![Spinner iOS](./img/spinner_ios.png "iOSイメージ")
+![Spinner Android](./img/spinner_android.png "iOSイメージ")
 
 
 SpinnerDialog.show() に直接引数を渡す
