@@ -21,16 +21,17 @@ https://www.npmjs.com/package/cordova-plugin-spinner
 https://www.npmjs.com/package/cordova-plugin-media-capture
 
 
+## [cordova-plugin-image-resizer](imageresizer.md)
+リサイズ
+https://github.com/protonet/cordova-plugin-image-resizer
+
+
 ## [cordova-fabric-plugin](fabric.md)
 fabric.io の Crashlytics と Answers
+※ ionic-native 非対応
 https://www.npmjs.com/package/cordova-fabric-plugin
 
 
 ## [cordova-plugin-camera-preview](camera-preview.md)
 カメラのUIを自分で作れる
 https://github.com/westonganger/cordova-plugin-camera-preview
-
-
-## [cordova-plugin-image-resizer](imageresizer.md)
-リサイズ
-https://github.com/protonet/cordova-plugin-image-resizer
