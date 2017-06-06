@@ -7,6 +7,7 @@ import { MediaCapturePage } from './media-capture';
 import { CameraPreviewPage } from './camera-preview'
 import { SpinnerDialogPage } from './spinner-dialog'
 import { ImageResizerPage } from './image-resizer'
+import { DevicePage } from './device/device'
 
 /*
   Generated class for the Top page.
@@ -50,6 +51,7 @@ export class TopPage {
       { title: '録音/録画など', component: MediaCapturePage },
       { title: '共有', component: SocialsharingPage },
       { title: 'スピナー', component: SpinnerDialogPage },
+      { title: 'デバイス情報', component: DevicePage },
     ];
   }
 

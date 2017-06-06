@@ -11,9 +11,12 @@ import { MediaCapturePage } from '../pages/media-capture';
 import { CameraPreviewPage } from '../pages/camera-preview'
 import { SpinnerDialogPage } from '../pages/spinner-dialog'
 import { ImageResizerPage } from '../pages/image-resizer'
+import { DevicePage } from '../pages/device/device'
 
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { Device } from '@ionic-native/device';
+
 
 @NgModule({
   declarations: [
@@ -25,6 +28,7 @@ import { StatusBar } from '@ionic-native/status-bar';
     CameraPreviewPage,
     SpinnerDialogPage,
     ImageResizerPage,
+    DevicePage,
   ],
   imports: [
     BrowserModule,
@@ -41,10 +45,12 @@ import { StatusBar } from '@ionic-native/status-bar';
     CameraPreviewPage,
     SpinnerDialogPage,
     ImageResizerPage,
+    DevicePage,
   ],
   providers: [
     SplashScreen,
     StatusBar,
+    Device,
   ]
 })
-export class AppModule {}
+export class AppModule { }
