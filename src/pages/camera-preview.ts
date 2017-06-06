@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { CameraPreview } from 'ionic-native'
+import { CameraPreview, CameraPreviewOptions } from '@ionic-native/camera-preview'
 
 @Component({
   selector: 'page-camera-preview',
-  providers: [ CameraPreview ],
+  providers: [CameraPreview],
   template: `
 <ion-header>
 
@@ -45,58 +45,65 @@ export class CameraPreviewPage {
   pictureWidth: number = 320
   pictureHeight: number = 240
 
-  constructor(public navCtrl: NavController) {
+  constructor(
+    public navCtrl: NavController,
+    public cameraPreview: CameraPreview,
+  ) {
   }
 
   ionViewDidLoad() {
     console.log('Hello CameraPreviewPage Page');
 
-    CameraPreview.setOnPictureTakenHandler().subscribe(
+  }
+
+
+  button_startCamera() {
+    this.message = "button_startCamera"
+
+    let cameraOptions: CameraPreviewOptions = {
+      x: 0,
+      y: 0,
+      width: this.pictureWidth,
+      height: this.pictureHeight,
+      camera: 'back',
+      tapPhoto: true,
+      previewDrag: false,
+      toBack: true,
+      alpha: 1
+
+    }
+    this.cameraPreview.startCamera(cameraOptions)
+  }
+
+  button_stopCamera() {
+    this.message = "button_stopCamera"
+    this.cameraPreview.stopCamera()
+  }
+
+  button_takePicture() {
+    this.message = "button_takePicture"
+    this.cameraPreview.takePicture({}).then(
       result => {
         this.message = "setOnPictureTakenHandler : " + result[0]
         this.originalPicture = result[0]  // アプリローカルフォルダに保存されたファイル名が帰ってくる
-        CameraPreview.stopCamera()
+        this.cameraPreview.stopCamera()
       }
     )
   }
 
-
-  button_startCamera(){
-    this.message = "button_startCamera"
-
-    CameraPreview.startCamera(
-      { x: 0, y: 0, width: this.pictureWidth, height: this.pictureHeight }, // rect
-      'back',  //defaultCamera
-      true, // tapEnabled
-      false,  // dragEnabled
-      true, // toBack
-      1 // alpha
-    )
-  }
-
-  button_stopCamera(){
-    this.message = "button_stopCamera"
-    CameraPreview.stopCamera()
-  }
-
-  button_takePicture(){
-    this.message = "button_takePicture"
-    CameraPreview.takePicture({ maxWidth: this.pictureWidth, maxHeight: this.pictureHeight })
-  }
-
-  button_switchCamera(){
+  button_switchCamera() {
     this.message = "button_switchCamera"
-    CameraPreview.switchCamera()
+    this.cameraPreview.switchCamera()
   }
 
-  button_show(){
+  button_show() {
     this.message = "button_show"
-    CameraPreview.show()
+    this.cameraPreview.show()
   }
 
-  button_hide(){
+  button_hide() {
     this.message = "button_hide"
-    CameraPreview.hide()
+    this.cameraPreview.hide()
   }
 
 }

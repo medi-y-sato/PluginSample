@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
+
 import { MyApp } from './app.component';
 import { TopPage } from '../pages/top';
 import { SocialsharingPage } from '../pages/socialsharing';
@@ -8,6 +11,9 @@ import { MediaCapturePage } from '../pages/media-capture';
 import { CameraPreviewPage } from '../pages/camera-preview'
 import { SpinnerDialogPage } from '../pages/spinner-dialog'
 import { ImageResizerPage } from '../pages/image-resizer'
+
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { StatusBar } from '@ionic-native/status-bar';
 
 @NgModule({
   declarations: [
@@ -21,6 +27,8 @@ import { ImageResizerPage } from '../pages/image-resizer'
     ImageResizerPage,
   ],
   imports: [
+    BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -34,6 +42,9 @@ import { ImageResizerPage } from '../pages/image-resizer'
     SpinnerDialogPage,
     ImageResizerPage,
   ],
-  providers: []
+  providers: [
+    SplashScreen,
+    StatusBar,
+  ]
 })
 export class AppModule {}
