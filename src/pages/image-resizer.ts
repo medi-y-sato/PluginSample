@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { ImageResizer, ImageResizerOptions } from 'ionic-native'
+import { ImageResizer, ImageResizerOptions } from '@ionic-native/image-resizer'
 
 @Component({
   selector: 'page-image-resizer',
@@ -33,7 +33,10 @@ export class ImageResizerPage {
   destinationImageWidth: number
   destinationImageHeight: number
 
-  constructor(public navCtrl: NavController) {
+  constructor(
+    public navCtrl: NavController,
+    public imageResizer: ImageResizer,
+  ) {
   }
 
   ionViewDidLoad() {
@@ -41,11 +44,11 @@ export class ImageResizerPage {
     this.loadImage()
   }
 
-  loadImage(){
+  loadImage() {
     console.log('loadImage()')
     let sourceImage = new Image
 
-    sourceImage.onload = ( res ) => {
+    sourceImage.onload = (res) => {
       console.log('sourceImage.onload fired')
       console.log(JSON.stringify(res))
       this.sourceImageSrc = sourceImage.src
@@ -55,29 +58,29 @@ export class ImageResizerPage {
 
   }
 
-  resizeImage(srcFilePath: string, size:number){
+  resizeImage(srcFilePath: string, size: number) {
     console.log('resizeImage(' + srcFilePath + ',' + size + ')')
     let options = {
-       uri: srcFilePath,
-       folderName: 'PluginSamples', // required for Android
-       fileName: 'pluginsamples_thumbnail.png', //required for ios
-       quality: 90,
-       width: size,
-       height: size
+      uri: srcFilePath,
+      folderName: 'PluginSamples', // required for Android
+      fileName: 'pluginsamples_thumbnail.png', //required for ios
+      quality: 90,
+      width: size,
+      height: size
     } as ImageResizerOptions;
 
-    ImageResizer
+    this.imageResizer
       .resize(options)
       .then(
-        (filePath: string) => {
-          this.destinationImageSrc = filePath
-          this.destinationImageWidth = size
-          this.destinationImageHeight = size
-        },
-        (err) => {
-          console.error(err)
-        }
-     )
+      (filePath: string) => {
+        this.destinationImageSrc = filePath
+        this.destinationImageWidth = size
+        this.destinationImageHeight = size
+      },
+      (err) => {
+        console.error(err)
+      }
+      )
   }
 
 }

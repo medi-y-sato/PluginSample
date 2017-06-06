@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { MediaCapture } from 'ionic-native'
+import { MediaCapture } from '@ionic-native/media-capture'
 
 @Component({
   selector: 'page-media-capture',
@@ -31,26 +31,29 @@ export class MediaCapturePage {
 
   result: any
 
-  constructor(public navCtrl: NavController) {}
+  constructor(
+    public navCtrl: NavController,
+    public mediaCapture: MediaCapture,
+  ) { }
 
   ionViewDidLoad() {
     console.log('Hello MediaCapturePage Page');
   }
 
-  captureImage(){
-    MediaCapture.captureImage().then( res => {
+  captureImage() {
+    this.mediaCapture.captureImage().then(res => {
       this.result = res
     })
   }
 
-  captureAudio(){
-    MediaCapture.captureAudio().then( res => {
+  captureAudio() {
+    this.mediaCapture.captureAudio().then(res => {
       this.result = res
     })
   }
 
-  captureVideo(){
-    MediaCapture.captureVideo().then( res => {
+  captureVideo() {
+    this.mediaCapture.captureVideo().then(res => {
       this.result = res
     })
   }

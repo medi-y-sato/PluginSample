@@ -1,13 +1,13 @@
 import { Component, Inject } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import {FormBuilder, FormGroup } from '@angular/forms';
-import { SocialSharing } from 'ionic-native'
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { SocialSharing } from '@ionic-native/social-sharing'
 
 
 @Component({
   selector: 'page-socialsharing',
-  providers: [  ],
+  providers: [],
   template: `
 <ion-header>
   <ion-navbar>
@@ -45,12 +45,16 @@ export class SocialsharingPage {
 
   form: FormGroup;
 
-  constructor(public navCtrl: NavController, @Inject(FormBuilder) formbuilder: FormBuilder) {
+  constructor(
+    public navCtrl: NavController,
+    @Inject(FormBuilder) formbuilder: FormBuilder,
+    public socialSharing: SocialSharing,
+  ) {
     this.form = formbuilder.group({
-      message:'',
-      subject:'',
-      title:'',
-      url:'https://example.com',
+      message: '',
+      subject: '',
+      title: '',
+      url: 'https://example.com',
     });
   }
 
@@ -59,21 +63,21 @@ export class SocialsharingPage {
 
   }
 
-  share(){
+  share() {
     console.dir(this.form)
 
-    SocialSharing.shareWithOptions(
+    this.socialSharing.shareWithOptions(
       {
         message: this.form.value.message,
         subject: this.form.value.subject,
-//        files: ['', ''],
+        //        files: ['', ''],
         url: this.form.value.url,
         chooserTitle: '共有する:'
       },
     ).then(
       result => console.log(result.completed + "/" + result.app),
       msg => console.log("Sharing failed with message: " + msg)
-    )
+      )
 
   }
 
